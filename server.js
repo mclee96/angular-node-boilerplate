@@ -1,12 +1,11 @@
-var express = require('express');
-var app = express();
-var port = 8080;
+var express = require('express')
+var app = express()
+var port = 8080
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'))
 
+require('./app/routes.js')(app)
 
-require('./app/routes.js')(app);
+app.listen(port)
 
-app.listen(port);
-
-console.log("App listening on port " + port);
+console.log("App listening on port " + port)
