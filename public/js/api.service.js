@@ -1,10 +1,10 @@
 angular.module('app')
 .service('api', function($http, dataModel) {
 
-	this.doSomething = doSomething;
+  this.doSomething = doSomething;
 
-	function doSomething(onSuc, onErr) {
-		$http.get('/doSomething').then(onSuc, onErr);
-	}
+  function doSomething(onSuc, onErr) {
+    $http.get('/doSomething').then(onSuc, onErr);
+  }
 
 })

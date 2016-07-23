@@ -2,8 +2,8 @@ var controller = require('./controller')
 
 module.exports = (app) => {
 
-	app.get('/doSomething', controller.doSomething)
+  app.get('/doSomething', controller.doSomething)
 
-	app.get('*', (req, res) =>
-		res.sendFile(__dirname + '/public/index.html') )
+  app.get('*', (req, res) =>
+    res.sendFile(__dirname + '/public/index.html') )
 }
